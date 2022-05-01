@@ -98,9 +98,21 @@ Notes
 
 ## Storage
 
+### Partitions
+
 - `HOME: /global/home/users/chawins`: limited to 10 GB (code).
 - `GROUP: /global/home/groups/`: limited to 30/200 GB. Don't see one for `fc_wagner`.
 - `SCRATCH: /global/scratch/chawins`: unlimited but deleted after 6 months (large files).
+
+### Data Transfer
+
+Use data transfer server: see [link](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/data/transferring-data/).
+
+One option is to use `rsync` from `reds` or your local machine (NOTE: I have not tried this before, but it should work since it uses `ssh`):
+
+```bash
+rsync -chavzP --stats user@remote.host:/path/to/copy /path/to/local/storage
+```
 
 ## Using Python (conda and ML stuff)
 
