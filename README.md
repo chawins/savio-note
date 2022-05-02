@@ -76,6 +76,10 @@ Run a bash script using `sbatch myjob.sh`. Example bash script:
 #SBATCH --time=00:03:00
 #SBATCH --output slurm-%j-exp54.out
 ## Command(s) to run:
+source /global/home/users/$USER/.bash_profile
+module purge
+module load python
+source activate /global/scratch/users/$USER/pt
 python myscript.py
 ```
 
@@ -87,6 +91,7 @@ Notes
   - `savio2_gpu`: 2.67 (5.12 / GPU)
   - `savio_1080ti`: 1.67 (3.34 / GPU)
 - Note that if `--cpus-per-task` is fewer than the number of cores on a node, your job will not make full use of the node.
+- When submitting the script, you should not be inside any `conda` environment.
 
 ## Useful Commands
 
