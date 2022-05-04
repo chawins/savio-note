@@ -107,7 +107,7 @@ Notes
 
 - `HOME: /global/home/users/chawins`: limited to 10 GB (code).
 - `GROUP: /global/home/groups/`: limited to 30/200 GB. Don't see one for `fc_wagner`.
-- `SCRATCH: /global/scratch/chawins`: unlimited but deleted after 6 months (large files).
+- `SCRATCH: /global/scratch/users/chawins`: unlimited but deleted after 6 months (large files).
 
 ### Data Transfer
 
