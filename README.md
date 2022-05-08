@@ -116,7 +116,7 @@ Use data transfer server: see [link](https://docs-research-it.berkeley.edu/servi
 One option is to use `rsync` from `reds` or your local machine (NOTE: I have not tried this before, but it should work since it uses `ssh`):
 
 ```bash
-rsync -chavzP --stats user@remote.host:/path/to/copy /path/to/local/storage
+rsync -chavzPR --stats /path/to/copy username@dtn.brc.berkeley.edu:/path/to/destination
 ```
 
 ## Using Python (conda and ML stuff)
