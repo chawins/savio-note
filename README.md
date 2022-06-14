@@ -153,8 +153,10 @@ Run the following commands to install and start up `conda` env. This installs `c
 
 ```[bash]
 module load python
+module load gcc
 conda create -p /global/scratch/users/$USER/pt python=3.8
 source activate /global/scratch/users/$USER/pt
+# Maybe exit and re-login again just to be safe.
 ```
 
 - Later you can put the lines 1 and 3 above in `.bashrc`.
@@ -162,8 +164,13 @@ source activate /global/scratch/users/$USER/pt
 Common packages to install
 
 ```[bash]
+source activate /global/scratch/users/$USER/pt
 # conda install pytorch==1.9 torchvision==0.10 cudatoolkit=11.1 -c pytorch -c conda-forge
 conda install -y pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 conda install -y scipy pandas scikit-learn pip
 conda upgrade -y numpy scipy pandas scikit-learn
 ```
+
+## Workflow
+
+- To make minor edits to run scripts, you can go to [https://ood.brc.berkeley.edu/pun/sys/dashboard/] -> `files` and use the in-browser editor there.
